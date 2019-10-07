@@ -6,14 +6,14 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:38:41 by badam             #+#    #+#             */
-/*   Updated: 2019/10/07 16:13:47 by badam            ###   ########.fr       */
+/*   Updated: 2019/10/07 16:26:13 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdlib.h"
 #include "ft_strlen.h"
 
-void	*ft_memcpy(unsigned char* dst, const unsigned char* src, size_t n)
+void	*ft_memcpy(unsigned char *dst, const unsigned char *src, size_t n)
 {
 	unsigned char *dstbgn;
 	unsigned char *dstcpy;
