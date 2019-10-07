@@ -1,0 +1,15 @@
+• strchr
+• strrchr
+• strncmp
+• strlcpy
+• strlcat
+• strnstr
+• atoi
+• memchr
+• memcmp
+• calloc
+• strdup
+
+
+correct all prototype /!\
+test max val or ATOI
