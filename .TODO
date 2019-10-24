@@ -1,10 +1,5 @@
-• strchr
-• strrchr
-• strncmp
-• strlcpy
 • strlcat
 • strnstr
-• atoi
 • memchr
 • memcmp
 • calloc
@@ -13,3 +8,5 @@
 
 correct all prototype /!\
 test max val or ATOI
+Remove illegal external function
+Headers ?
