@@ -1,10 +1,18 @@
-• calloc
-• strdup
+Makefile
 
-+ PART 2
+PART 2:
+- strtrim
+- split
+- itoa
+- strmapi
+- putchar_fd
+- putstr_fd
+- putndl_fd
+- putnbr_fd 
+
++BONUS
 
 correct all prototype /!\
-test max val or ATOI
+test max val of ATOI
 Remove illegal external function
 Headers
-Makefile
