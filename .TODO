@@ -1,12 +1,10 @@
-• strlcat
-• strnstr
-• memchr
-• memcmp
 • calloc
 • strdup
 
++ PART 2
 
 correct all prototype /!\
 test max val or ATOI
 Remove illegal external function
-Headers ?
+Headers
+Makefile
