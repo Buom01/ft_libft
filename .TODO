@@ -1,6 +1,5 @@
 
 PART 2:
-- strmapi
 - putchar_fd
 - putstr_fd
 - putndl_fd
