@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 19:40:35 by badam             #+#    #+#             */
-/*   Updated: 2019/11/03 21:51:54 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/03 21:54:30 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_itoa(int n)
 {
 	size_t			strlen;
 	char			*str;
-	unsigned int	nb;
+	long			nb;
 	char			sign;
 	size_t			lenpowten;
 
