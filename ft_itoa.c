@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 19:40:35 by badam             #+#    #+#             */
-/*   Updated: 2019/11/03 20:19:48 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/03 21:51:54 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ char	*ft_itoa(int n)
 		lenpowten *= 10;
 		strlen++;
 	}
+	if (sign == -1)
+		strlen++;
 	str = malloc(sizeof(char) * strlen);
 	if (str)
 		return (NULL);
