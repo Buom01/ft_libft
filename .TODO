@@ -1,16 +1,6 @@
 
-review itoa ! (sign mainly)
-Makefile (reaming funcs)
-
-Should I make FD write char by char ?
-"When using non-blocking I/O on objects, such as sockets, that are subject
-     to flow control, write() and writev() may write fewer bytes than
-     requested; the return value must be noted, and the remainder of the oper-
-     ation should be retried when possible."
-
 +BONUS
 
 correct all prototype /!\
 test max val of ATOI
 Remove illegal external function
-Headers
