@@ -1,16 +1,17 @@
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror
-EXEC=libft.a
+TARGET=libft.a
 SRC= $(wildcard ft_*.c)
 OBJ= $(SRC:.c=.o)
 
-all: $(EXEC)
+all: $(TARGET)
 
-$(EXEC): $(OBJ)
+$(TARGET): $(OBJ)
 	ar -rcs $@ $(OBJ)
 
 %.o: %.c
 	$(CC) -o $@ -c $< $(CFLAGS)
 
 clean:
-	@rm -rf *.o
+	rm -rf *.o
+	rm -rf $(TARGET)
