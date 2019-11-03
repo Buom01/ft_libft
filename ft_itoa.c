@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 19:40:35 by badam             #+#    #+#             */
-/*   Updated: 2019/11/03 21:57:51 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/03 22:27:07 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,29 @@
 
 char	*ft_itoa(int n)
 {
-	size_t			strlen;
-	char			*str;
-	long			nb;
-	char			sign;
-	long			lenpowten;
+	int		positive;
+	int		posinb;
+	int		posinbcpy;
+	size_t	strlen;
+	char	*str;
 
-	strlen = 0;
-	lenpowten = 1;
-	sign = (n < 0) ? -1 : 1;
-	nb = (n < 0) ? (-1 * (long)n) : (long)n;
-	while (nb >= lenpowten)
+	positive = (n < 0);
+	strlen = positive ? 2 : 1;
+	posinb = positive ? (int)(-1 * (long)n) : n;
+	posinbcpy = posinb;
+	while (posinbcpy)
 	{
-		lenpowten *= 10;
+		posinbcpy /= 10;
 		strlen++;
 	}
-	if (sign == -1)
-		strlen++;
-	str = malloc(sizeof(char) * strlen);
-	if (str)
+	if (!(str = malloc(sizeof(char) * strlen)))
 		return (NULL);
 	str[--strlen] = '\0';
-	while (strlen)
+	str[0] = '-';
+	while (positive ? strlen : (strlen - 1))
 	{
-		str[strlen--] = '0' + nb % 10;
-		nb /= 10;
+		str[strlen--] = posinb % 10;
+		posinb /= 10;
 	}
 	return (str);
 }
