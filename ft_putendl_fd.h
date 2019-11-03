@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.h                                    :+:      :+:    :+:   */
+/*   ft_putendl_fd.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/03 20:51:31 by badam             #+#    #+#             */
-/*   Updated: 2019/11/03 21:58:48 by badam            ###   ########.fr       */
+/*   Created: 2019/11/03 21:09:21 by badam             #+#    #+#             */
+/*   Updated: 2019/11/03 21:31:22 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PUTCHAR_FD_H
-# define FT_PUTCHAR_FD_H
+#ifndef FT_PUTENDL_FD
+# define FT_PUTENDL_FD
 
-void	ft_putchar_fd(char c, int fd);
+void ft_putendl_fd(char *s, int fd);
 
 #endif

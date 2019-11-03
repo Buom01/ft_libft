@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.h                                    :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/03 20:51:31 by badam             #+#    #+#             */
-/*   Updated: 2019/11/03 21:58:48 by badam            ###   ########.fr       */
+/*   Created: 2019/11/03 21:47:57 by badam             #+#    #+#             */
+/*   Updated: 2019/11/03 21:59:13 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PUTCHAR_FD_H
-# define FT_PUTCHAR_FD_H
+#include "ft_itoa.h"
+#include "ft_putstr_fd.h"
 
-void	ft_putchar_fd(char c, int fd);
-
-#endif
+void	ft_putnbr_fd(int n, int fd)
+{
+	ft_putstr_fd(ft_itoa(n), fd);	
+}
