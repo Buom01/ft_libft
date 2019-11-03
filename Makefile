@@ -1,15 +1,16 @@
-EXEC=libft
-SRC= $(wildcard *.c)
+CC=gcc
+CFLAGS=-Wall -Wextra -Werror
+EXEC=libft.a
+SRC= $(wildcard ft_*.c)
 OBJ= $(SRC:.c=.o)
 
 all: $(EXEC)
 
 $(EXEC): $(OBJ)
-	@$(CC) -o $@ $^ $(LDFLAGS)  // A recoder
-	ar -rcs libft.a *.o
+	ar -rcs $@ $(OBJ)
 
 %.o: %.c
-	@$(CC) -o $@ -c $< $(CFLAGS)  // A recoder
+	$(CC) -o $@ -c $< $(CFLAGS)
 
 clean:
 	@rm -rf *.o
