@@ -6,35 +6,30 @@
 /*   By: badam <badam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 13:17:15 by badam             #+#    #+#             */
-/*   Updated: 2019/11/03 13:42:52 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/03 19:07:27 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "stddef.h"
+#include "ft_strchr.h"
+#include "ft_strrchr.h"
+#include "ft_substr.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*scpy;
-	char	*setcpy;
 	size_t	trimdlen;
 	size_t	trimbgn;
 
-	scpy = s1;
+	scpy = (char*)s1;
 	trimdlen = 0;
-	trimbgn = 0;
-
-
-	// On delete tout ça et on recommence :
-	while (*scpy)
-	{
-		setcpy = set;
-		while (*setcpy)
-		{
-			if (*setcpy == *scpy)
-			{
-				trimdlen++;
-				break;
-			}
-			setcpy++;
-		}
+	while (ft_strchr(set, (int)(*scpy)))
 		scpy++;
-	}
+	trimbgn = scpy - (char*)s1;
+	while (*(scpy + 1))
+		scpy++;
+	while (ft_strrchr(set, (int)(*scpy)))
+		scpy--;
+	trimdlen = scpy - (char*)s1 - trimbgn + 1;
+	return (ft_substr(s1, trimbgn, trimdlen));
 }
