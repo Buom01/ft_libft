@@ -1,6 +1,5 @@
 
 PART 2:
-- itoa
 - strmapi
 - putchar_fd
 - putstr_fd
