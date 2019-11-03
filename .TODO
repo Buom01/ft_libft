@@ -1,7 +1,5 @@
-Makefile
 
 PART 2:
-- strtrim
 - split
 - itoa
 - strmapi
@@ -9,6 +7,8 @@ PART 2:
 - putstr_fd
 - putndl_fd
 - putnbr_fd 
+
+Makefile (reaming funcs)
 
 +BONUS
 
