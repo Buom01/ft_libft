@@ -5,21 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/24 15:37:55 by badam             #+#    #+#             */
-/*   Updated: 2019/10/24 15:50:11 by badam            ###   ########.fr       */
+/*   Created: 2019/11/04 18:43:03 by badam             #+#    #+#             */
+/*   Updated: 2019/11/04 18:45:59 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *o;
+	unsigned char *strcpy;
 
-	o = (char *)s;
-	while (*o != (char)c && *o != '\0')
+	strcpy = (unsigned char*)s;
+	while (*strcpy)
+		strcpy++;
+	while (*strcpy != (unsigned char)c)
 	{
-		o++;
+		if (strcpy == s)
+			break;
+		strcpy--;
 	}
-	if (*o != '\0')
-		return (0);
-	return (o);
+	return (((unsigned char)c == *strcpy) ? strcpy : NULL);
 }
