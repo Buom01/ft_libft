@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:51:45 by badam             #+#    #+#             */
-/*   Updated: 2019/11/03 18:30:36 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 02:27:04 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *str)
 	char	*end;
 
 	end = (char*)str;
-	while (end)
+	while (*end)
 		end++;
 	return ((const char*)end - str);
 }
