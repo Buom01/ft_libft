@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 16:46:22 by badam             #+#    #+#             */
-/*   Updated: 2019/11/01 16:48:37 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 20:23:04 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@ int	ft_memcmp(void *s1, void *s2, size_t n)
 
 	s3 = (unsigned char*)s1;
 	s4 = (unsigned char*)s2;
-	while (*s3 == *s4 && (n--) > 0)
+	if (!n)
+		return (0);
+	while (*s3 == *s4 && n--)
 	{
 		s3++;
 		s4++;
 	}
-	return ((*s3) - (*s4));
+	return (*s3 - *s4);
 }

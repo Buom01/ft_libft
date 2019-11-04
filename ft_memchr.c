@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 16:29:15 by badam             #+#    #+#             */
-/*   Updated: 2019/11/04 18:22:49 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 20:18:09 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (n-- && charcpy != *strcpy)
 		strcpy++;
 	if (charcpy == *strcpy)
-		return (NULL);
-	else
 		return ((void*)strcpy);
+	else
+		return (NULL);
 }
