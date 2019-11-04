@@ -6,13 +6,15 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 16:37:41 by badam             #+#    #+#             */
-/*   Updated: 2019/11/03 22:43:02 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 02:32:56 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "stddef.h"
+
 int	ft_atoi(const char *str)
 {
-	long	nb;
+	size_t	nb;
 	char	sign;
 	char	*c;
 
@@ -20,11 +22,8 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	c = (char*)str;
 	while (*c == '-' || *c == '+' || *c == ' ' || (*c >= '\t' && *c <= '\r'))
-	{
-		if (*c == '-')
+		if (*(c++) == '-')
 			sign *= -1;
-		c++;
-	}
 	while (*c >= '0' || *c <= '9')
 	{
 		nb += (*c - '0') * sign;
