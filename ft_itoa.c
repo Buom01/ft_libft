@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 19:40:35 by badam             #+#    #+#             */
-/*   Updated: 2019/11/03 22:27:07 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 18:33:39 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ char	*ft_itoa(int n)
 	size_t	strlen;
 	char	*str;
 
-	positive = (n < 0);
-	strlen = positive ? 2 : 1;
-	posinb = positive ? (int)(-1 * (long)n) : n;
+	positive = (n >= 0);
+	strlen = positive ? 1 : 2;
+	posinb = positive ? n : (int)(-1 * (long)n);
 	posinbcpy = posinb;
 	while (posinbcpy)
 	{
