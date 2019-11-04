@@ -1,13 +1,18 @@
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror
 NAME=libft.a
-SRC= $(wildcard ft_*.c)
+SRC= $(filter-out %_bonus.%,$(wildcard ft_*.c))
 OBJ= $(SRC:.c=.o)
+SRC_BONUS= $(filter %_bonus.%,$(wildcard ft_*.c))
+OBJ_BONUS= $(SRC_BONUS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar -rcs $@ $(OBJ)
+
+bonus: $(OBJ) $(OBJ_BONUS)
+	ar -rcs $@ $(OBJ) $(OBJ_BONUS)
 
 %.o: %.c
 	$(CC) -o $@ -c $< $(CFLAGS)
