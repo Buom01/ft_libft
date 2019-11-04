@@ -6,26 +6,21 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:38:41 by badam             #+#    #+#             */
-/*   Updated: 2019/10/07 16:26:13 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 02:22:29 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdlib.h"
 #include "ft_strlen.h"
 
-void	*ft_memcpy(unsigned char *dst, const unsigned char *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char *dstbgn;
-	unsigned char *dstcpy;
-	unsigned char *dstcpybgn;
+	void	*dstcpy;
+	void	*srccpy;
 
-	dstbgn = dst;
-	dstcpy = malloc(ft_strlen((const char*)dst) * sizeof(*dst));
-	dstcpybgn = dstcpy;
-	while (*dst)
-		*(dstcpy++) = *(dst++);
-	dst = dstbgn;
-	while (*src && n--)
-		*(dst++) = *((unsigned char*)(src++));
-	return (dstcpybgn);
+	dstcpy = dst;
+	srccpy = (void*)src;
+	while (n--)
+		*((unsigned char*)dstcpy++) = *((unsigned char*)(srccpy++));
+	return (dst);
 }
