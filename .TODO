@@ -1,4 +1,8 @@
 
+review all mem* headers
+review itoa, atoi, strmapi, and str* nor strjoin
+
+
 +BONUS
 
 correct all prototype /!\
