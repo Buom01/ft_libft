@@ -6,10 +6,11 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 15:51:20 by badam             #+#    #+#             */
-/*   Updated: 2019/11/04 15:59:05 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 16:24:34 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include "unistd.h"
 
 t_list *ft_lstnew(void *content)

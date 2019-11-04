@@ -6,12 +6,14 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 16:16:49 by badam             #+#    #+#             */
-/*   Updated: 2019/11/04 16:17:42 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 16:23:41 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LSTLAST_BONUS_H
 # define FT_LSTLAST_BONUS_H
+
+#include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst);
 
