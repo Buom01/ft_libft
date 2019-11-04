@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 21:47:57 by badam             #+#    #+#             */
-/*   Updated: 2019/11/03 21:59:13 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 17:10:35 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putstr_fd(ft_itoa(n), fd);	
+	ft_putstr_fd(ft_itoa(n), fd);
 }

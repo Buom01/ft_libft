@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 17:03:49 by badam             #+#    #+#             */
-/*   Updated: 2019/11/04 17:09:16 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 17:11:58 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	void	*next;
+
 	next = *lst;
 	while (next)
 	{
