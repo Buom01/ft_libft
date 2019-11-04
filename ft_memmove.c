@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 16:21:56 by badam             #+#    #+#             */
-/*   Updated: 2019/11/04 17:58:57 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 20:33:09 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,14 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char *dstbgn;
-	unsigned char *dstcpy;
-	unsigned char *dstcpybgn;
+	unsigned char	*dstcpy;
+	unsigned char	*srccpy;
 
-	dstbgn = (unsigned char*)dst;
-	dstcpy = malloc(ft_strlen((const char*)dst) * sizeof(*dst));
-	dstcpybgn = dstcpy;
-	while (*((unsigned char*)dst))
-		*(dstcpy++) = *((unsigned char*)(dst++));
-	dst = dstbgn;
-	while (*((unsigned char*)src) && len-- && *((unsigned char*)(dst + 1)) == 0)
-		*((unsigned char*)(dst++)) = *((unsigned char*)(src++));
-	return (dstcpybgn);
+	if (!dst || !src)
+		return (NULL);
+	dstcpy = (unsigned char*)dst;
+	srccpy = (unsigned char*)src;
+	while (n-- && !(*dstcpy))
+		*(dstcpy++) = *(srccpy++);
+	return (dst);
 }
