@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 15:23:08 by badam             #+#    #+#             */
-/*   Updated: 2019/11/04 18:59:36 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 19:00:50 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_strchr(const char *s, int c)
 			break;
 		strcpy++;
 	}
-	return (((unsigned char)c == *strcpy) ? strcpy : NULL);
+	return (((unsigned char)c == *strcpy) ? (char*)strcpy : NULL);
 }
