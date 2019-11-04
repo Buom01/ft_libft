@@ -1,5 +1,5 @@
 
-all before memcmp was reviewed
+all before memcpy was reviewed
 
 review strmapi, mem*, and str* nor strjoin
 lst* from bonus
