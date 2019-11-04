@@ -6,12 +6,14 @@
 /*   By: badam <badam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 01:58:41 by badam             #+#    #+#             */
-/*   Updated: 2019/11/04 16:14:55 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 16:26:31 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+#include "stddef.h"
 
 typedef struct s_list
 {
