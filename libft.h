@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: badam <badam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 01:42:08 by badam             #+#    #+#             */
-/*   Updated: 2019/11/04 01:43:42 by badam            ###   ########.fr       */
+/*   Created: 2019/11/04 01:58:41 by badam             #+#    #+#             */
+/*   Updated: 2019/11/04 02:01:45 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ int     ft_isascii(int c);
 int     ft_isdigit(int digit);
 int     ft_isprint(int c);
 char    *ft_itoa(int n);
-                int c, size_t n);
+void	*ft_memccpy(unsigned char *dst, const unsigned char *src,
+			int c, size_t n);
 void    *ft_memchr(const void *s, int c, size_t n);
 int     ft_memcmp(void *s1, void *s2, size_t n);
 void    *ft_memcpy(unsigned char *dst, const unsigned char *src, size_t n);
@@ -36,7 +37,9 @@ char    **ft_split(char const *s, char c);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strdup(const char *s1);
 char    *ft_strjoin(char const *s1, char const *s2);
+size_t  ft_strlcat(char *restrict dst, const char *restrict src,
                 size_t dstsize);
+size_t  ft_strlcpy(char *restrict dst, const char *restrict src,
                 size_t dstsize);
 size_t  ft_strlen(const char *str);
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
