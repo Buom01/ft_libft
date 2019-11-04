@@ -6,20 +6,20 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 15:23:08 by badam             #+#    #+#             */
-/*   Updated: 2019/10/24 15:36:25 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 18:42:12 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-	char *o;
+	unsigned char *strcpy;
 
-	o = (char *)s;
-	while (*o != (char)c && *(o - 1) != '\0')
+	strcpy = (unsigned char*)s;
+	while (*strcpy != (unsigned char)c)
 	{
-		o++;
+		strcpy++;
+		if (!(*strcpy))
+			break;
 	}
-	if (*(o - 1) != '\0')
-		return (0);
-	return (o);
+	return (((unsigned char)c == *strcpy) ? strcpy : NULL);
 }
