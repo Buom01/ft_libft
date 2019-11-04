@@ -1,7 +1,9 @@
 
-all before memcpy was reviewed
+all before memset was reviewed
 
-review strmapi, mem*, and str* nor strjoin
+
+
+review strmapi, and str* nor strjoin, memmove (overlap)
 lst* from bonus
 
 
