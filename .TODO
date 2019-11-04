@@ -1,6 +1,5 @@
 
-review all mem* headers
-review itoa, atoi, strmapi, and str* nor strjoin
+review itoa, strmapi, mem*, and str* nor strjoin
 
 
 +BONUS
