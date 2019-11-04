@@ -6,25 +6,23 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 16:11:28 by badam             #+#    #+#             */
-/*   Updated: 2019/10/24 16:31:20 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 18:58:30 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stddef.h"
+#include "ft_strlen.h"
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
+	char	*dstcpy;
+	char	*srccpy;
 
-	i = 0;
-	while (i < dstsize && src[i])
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	if (dstsize != 0)
-		dst[i] = '\0';
-	while (src[i])
-		i++;
-	return (i - 1);
+	dstcpy = dst;
+	srccpy = (char*)src;
+	while (*srccpy && --dstsize > 0)
+		*(dstcpy++) = *(srccpy++);
+	*dstcpy = '\0';
+
+	return (ft_strlen(dstcpy) + ft_strlen(srccpy));
 }
