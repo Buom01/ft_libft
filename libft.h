@@ -6,7 +6,7 @@
 /*   By: badam <badam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 01:58:41 by badam             #+#    #+#             */
-/*   Updated: 2019/11/04 17:59:10 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 18:51:20 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ char			*ft_strdup(const char *s1);
 char			*ft_strjoin(char const *s1, char const *s2);
 size_t			ft_strlcat(char *restrict dst, const char *restrict src,
 				size_t dstsize);
-size_t			ft_strlcpy(char *restrict dst, const char *restrict src,
-				size_t dstsize);
+size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlen(const char *str);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
