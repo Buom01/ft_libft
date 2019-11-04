@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 16:07:34 by badam             #+#    #+#             */
-/*   Updated: 2019/11/04 16:24:48 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/04 16:27:37 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		ft_lstsize(t_list *lst)
 	int	lstlen;
 
 	lstlen = 1;
-	while (lst = lst->next)
+	while ((lst = lst->next))
 		lstlen++;
 
 	return (lstlen);
