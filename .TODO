@@ -1,5 +1,8 @@
 
-review itoa, strmapi, mem*, and str* nor strjoin
+all before memcmp was reviewed
+
+review strmapi, mem*, and str* nor strjoin
+lst* from bonus
 
 
 +BONUS
