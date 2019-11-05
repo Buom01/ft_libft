@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 15:44:54 by badam             #+#    #+#             */
-/*   Updated: 2019/11/05 19:47:24 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/05 20:28:57 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	srccpy = (unsigned char*)src;
 	while (n-- && *(srccpy - 1) != (unsigned char)c)
 		*((unsigned char*)(dst++)) = *(srccpy++);
-	return (*srccpy == (unsigned char)c) ? (void*)(++dst) : NULL);
+	return ((*srccpy == (unsigned char)c) ? (void*)(++dst) : NULL);
 }
