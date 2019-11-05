@@ -1,7 +1,7 @@
 
-all before ft_split was reviewed
+all before ft_strlcpy was reviewed
 
-
+review malloc miss sizeof !
 
 review strmapi, and str* nor strjoin
 lst* from bonus
