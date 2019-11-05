@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 18:43:03 by badam             #+#    #+#             */
-/*   Updated: 2019/11/05 17:20:23 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/05 17:23:53 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	strcpy = (unsigned char*)s;
 	while (*strcpy)
 		strcpy++;
-	while (*strcpy != (unsigned char)c)
-	{
-		if (strcpy == (unsigned char*)s)
-			break ;
+	while (*strcpy != (unsigned char)c && strcpy != (unsigned char*)s)
 		strcpy--;
-	}
 	return (((unsigned char)c == *strcpy) ? (char*)strcpy : NULL);
 }
