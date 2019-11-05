@@ -1,10 +1,9 @@
 
-all before ft_strlcpy was reviewed
+all before ft_substr was reviewed
 
 review malloc miss sizeof !
 
-review strmapi, and str* nor strjoin
-lst* from bonus
+review lst* from bonus
 
 strlcat
 strsplit
