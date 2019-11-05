@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 15:16:44 by badam             #+#    #+#             */
-/*   Updated: 2019/11/01 16:26:39 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/05 20:02:22 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		}
 	}
 	if (needle[ndcur] && ndcur < len && ndcur > 0)
-		return (--hscpy);
+		return (hscpy - ndcur);
 	else
 		return (NULL);
 }
