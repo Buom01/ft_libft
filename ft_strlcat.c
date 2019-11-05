@@ -6,31 +6,28 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 14:16:46 by badam             #+#    #+#             */
-/*   Updated: 2019/11/05 20:49:26 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/05 21:01:28 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stddef.h"
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int		len;
+	size_t	len;
+	char	*dstcpy;
 	char	*srccpy;
 
+	len = ft_strlen(dst);
+	dstcpy = dst + len;
 	srccpy = (char*)src;
-	len = 0;
 	if (dstsize)
 	{
-		while (*dst && dstsize-- && ++len)
-			dst++;
-		while (*srccpy && (--dstsize > 0) && ++len)
-			*(dst++) = *(srccpy++);
+		dstsize -= len;
+		while (--dstsize && *srccpy)
+			*(dstcpy++) = *(srccpy++);
 		*dst = '\0';
 	}
-	else
-		while (*dst && ++len)
-			dst++;
-	while (*(srccpy++))
-		len++;
+	len += ft_strlen(src);
 	return (len);
 }
