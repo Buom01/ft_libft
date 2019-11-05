@@ -1,9 +1,9 @@
 
-all before memset was reviewed
+all before putstr_fd was reviewed
 
 
 
-review strmapi, and str* nor strjoin, memmove (overlap), memccpy
+review strmapi, and str* nor strjoin
 lst* from bonus
 
 
