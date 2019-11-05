@@ -6,8 +6,6 @@ review malloc miss sizeof !
 review strmapi, and str* nor strjoin
 lst* from bonus
 
-memmove
-memccpy
 strlcat
 strsplit
 
