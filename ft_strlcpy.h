@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/24 16:11:28 by badam             #+#    #+#             */
-/*   Updated: 2019/11/05 16:27:23 by badam            ###   ########.fr       */
+/*   Created: 2019/11/05 16:54:59 by badam             #+#    #+#             */
+/*   Updated: 2019/11/05 16:55:58 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stddef.h"
-#include "ft_strlen.h"
+#ifndef FT_STRLCPY_H
+# define FT_STRLCPY_H
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
-{
-	char	*dstcpy;
-	char	*srccpy;
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
-	dstcpy = dst;
-	srccpy = (char*)src;
-	if (!dst || !src)
-		return (NULL);
-	while (*srccpy && --dstsize > 0)
-		*(dstcpy++) = *(srccpy++);
-	*dstcpy = '\0';
-
-	return (ft_strlen(dstcpy) + ft_strlen(srccpy));
-}
+#endif
