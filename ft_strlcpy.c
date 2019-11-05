@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 16:11:28 by badam             #+#    #+#             */
-/*   Updated: 2019/11/05 17:20:42 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/05 17:39:09 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		return (0);
 	while (*srccpy && --dstsize > 0)
 		*(dstcpy++) = *(srccpy++);
-	*dstcpy = '\0';
-	return (ft_strlen(dstcpy) + ft_strlen(srccpy));
+	if (dstsize > 0)
+		*dstcpy = '\0';
+	return (ft_strlen(src) + 1);
 }
