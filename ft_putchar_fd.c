@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 20:52:08 by badam             #+#    #+#             */
-/*   Updated: 2019/11/03 20:57:59 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/05 19:54:59 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	char	buf[1];
+	unsigned char	buf[1];
 
-	*buf = c;
+	*buf = (unsigned char)c;
 	write(fd, (const void*)buf, 1);
 }
