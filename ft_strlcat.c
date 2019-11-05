@@ -6,11 +6,12 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 14:16:46 by badam             #+#    #+#             */
-/*   Updated: 2019/11/05 21:01:28 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/05 21:02:47 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stddef.h"
+#include "ft_strlen.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
