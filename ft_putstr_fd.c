@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 20:58:54 by badam             #+#    #+#             */
-/*   Updated: 2019/11/03 21:06:48 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/05 16:11:45 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,9 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, (const void*)s, ft_strlen(s));
+	size_t	len;
+
+	len = ft_strlen(s);
+	if (len)
+		write(fd, (const void*)s, len);
 }
