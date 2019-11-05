@@ -1,14 +1,21 @@
 
-all before ft_substr was reviewed
 
-review malloc miss sizeof !
+split
+strnstr
+strlcpy 
+strlcpy 
+atoi and blanks
+memcmp ?
+memchr
+memccpy ?
+strtrim ?
+
+should make own tests for:
+strlcat
+strlcpy 
 
 review lst* from bonus
-
-strlcat
-strsplit
-
-+BONUS
++BONUS (end)
 
 test max val of ATOI
 Remove illegal external function
