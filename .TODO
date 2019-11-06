@@ -1,8 +1,6 @@
-
-
 strnstr
 strlcpy 
-strlcpy 
+strlcat 
 memcmp ?
 memchr
 memccpy ?
