@@ -1,10 +1,8 @@
 
 
-split
 strnstr
 strlcpy 
 strlcpy 
-atoi and blanks
 memcmp ?
 memchr
 memccpy ?
