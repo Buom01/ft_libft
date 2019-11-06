@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:36:27 by badam             #+#    #+#             */
-/*   Updated: 2019/11/06 19:41:49 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/06 19:53:37 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,25 @@
 #include "stdlib.h"
 #include "ft_substr.h"
 
-static char	*ft_split_stripchar(char *str, char c)
+static char		*ft_split_stripchar(char *str, char c)
 {
 	while (*str && *str == c)
 		str++;
 	return (str);
 }
 
-static char	**ft_split_freeup(char **tab, size_t itemtofreeup)
+static size_t	ft_split_countfrgmt(char *str, char c)
+{
+	size_t	frgmtc;
+
+	frgmtc = 0;
+	while (*str)
+		if (*(str++) == c && *str != c && *str)
+			frgmtc++;
+	return (++frgmtc);
+}
+
+static char		**ft_split_freeup(char **tab, size_t itemtofreeup)
 {
 	char **tabcpy;
 
@@ -32,7 +43,7 @@ static char	**ft_split_freeup(char **tab, size_t itemtofreeup)
 	return (NULL);
 }
 
-char		**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char	**tab;
 	char	*strcpy;
@@ -40,15 +51,12 @@ char		**ft_split(char const *s, char c)
 	size_t	frgmtlen;
 	size_t	itemtofreeup;
 
+	itemtofreeup = 0;
 	frgmtc = 0;
 	strcpy = ft_split_stripchar((char*)s, c);
-	while (*strcpy)
-		if (*(strcpy++) == c && *strcpy != c && *strcpy)
-			frgmtc++;
-	if (!(tab = malloc((++frgmtc + 1) * sizeof(char*))))
+	frgmtc = ft_split_countfrgmt(strcpy, c);
+	if (!(tab = malloc((frgmtc + 1) * sizeof(char*))))
 		return (NULL);
-	strcpy = ft_split_stripchar((char*)s, c);
-	itemtofreeup = 0;
 	while (*strcpy)
 	{
 		frgmtlen = 0;
