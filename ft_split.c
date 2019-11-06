@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:36:27 by badam             #+#    #+#             */
-/*   Updated: 2019/11/06 18:14:32 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/06 19:15:11 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,31 +18,32 @@ char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	char	*strcpy;
-	size_t	frgmt;
+	size_t	frgmtc;
 	size_t	frgmtlen;
 
-	frgmt = 0;
+	frgmtc = 0;
 	strcpy = (char*)s;
-	while (*(strcpy++))
-		if (*(strcpy - 1) == c && *(strcpy - 2) != c)
-			frgmt++;
-	if (!(tab = malloc((frgmt++ + 1) * sizeof (char*))))
+	while (*strcpy && *strcpy == c)
+		strcpy++;
+	while (*strcpy)
+		if (*(strcpy++) == c && *strcpy != c && *strcpy)
+			frgmtc++;
+	if (!(tab = malloc((++frgmtc + 1) * sizeof (char*))))
 		return (NULL);
 	strcpy = (char*)s;
+	while (*strcpy && *strcpy == c)
+		strcpy++;
 	while (*strcpy)
 	{
 		frgmtlen = 0;
 		while (strcpy[frgmtlen] && strcpy[frgmtlen] != c)
 			frgmtlen++;
 		if (!(*(tab++) = ft_substr(strcpy, 0, frgmtlen)))
-		{
-			// Free up
-			return (NULL);
-		}
+			return (NULL);  // Need to freeup
 		strcpy += frgmtlen + 1;
 		while (*strcpy && *strcpy == c)
 			strcpy++;
 	}
 	*tab = (NULL);
-	return (tab - frgmt);
+	return (tab - frgmtc);
 }
