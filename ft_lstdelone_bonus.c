@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 16:18:56 by badam             #+#    #+#             */
-/*   Updated: 2019/11/04 17:02:55 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/07 17:28:12 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	del(lst->content);
+	del(lst);
 	free(lst);
 }
