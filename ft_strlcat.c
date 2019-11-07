@@ -6,29 +6,37 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 14:16:46 by badam             #+#    #+#             */
-/*   Updated: 2019/11/05 21:09:35 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/07 21:02:48 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stddef.h"
 #include "ft_strlen.h"
+#include "stdio.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	len;
 	char	*dstcpy;
 	char	*srccpy;
+	size_t	len;
 
-	len = ft_strlen(dst);
-	dstcpy = dst + len;
+	dstcpy = (char*)dst;
 	srccpy = (char*)src;
-	if (dstsize)
+	len = ft_strlen(dstcpy);
+	if (!dstsize && !ft_strlen(srccpy))
+		return (0);
+	dstcpy += len;
+	if (len <= dstsize)
 	{
-		dstsize -= len;
-		while (--dstsize > 0 && *srccpy)
+		dstsize = ((size_t)(dstsize - len) > dstsize) ? (0) : (dstsize - len);
+		while (*srccpy && dstsize && --dstsize && ++len)
 			*(dstcpy++) = *(srccpy++);
-		*dst = '\0';
+		if (dstsize)
+			*dstcpy = '\0';
+		while (*(srccpy++))
+			len++;
 	}
-	len += ft_strlen(src);
+	else
+		len += dstsize;
 	return (len);
 }
