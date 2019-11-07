@@ -1,14 +1,9 @@
 memcmp ?
 memchr
 memccpy ?
-strtrim ?
-
-should make own tests for:
-strlcat
-strlcpy 
+strtrim ? (test full blank)
 
 review lst* from bonus
 +BONUS (end)
 
-test max val of ATOI
 Remove illegal external function
