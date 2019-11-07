@@ -1,6 +1,3 @@
-strnstr
-strlcpy 
-strlcat 
 memcmp ?
 memchr
 memccpy ?
