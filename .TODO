@@ -1,4 +1,3 @@
-memchr
 memccpy ?
 strtrim ? (test full blank)
 
