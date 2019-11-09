@@ -1,5 +1,4 @@
-memccpy ?
-strtrim ? (test full blank)
+memmove overlap ?
 
 review lst* from bonus
 +BONUS (end)
