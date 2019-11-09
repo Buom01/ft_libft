@@ -1,5 +1,6 @@
-memmove overlap ?
+strlcat
 
+static ?
 review lst* from bonus
 +BONUS (end)
 
