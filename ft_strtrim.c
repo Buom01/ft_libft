@@ -6,7 +6,7 @@
 /*   By: badam <badam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 13:17:15 by badam             #+#    #+#             */
-/*   Updated: 2019/11/03 19:07:27 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/09 18:29:07 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	scpy = (char*)s1;
 	trimdlen = 0;
-	while (ft_strchr(set, (int)(*scpy)))
+	while (*scpy && ft_strchr(set, (int)(*scpy)))
 		scpy++;
 	trimbgn = scpy - (char*)s1;
 	while (*(scpy + 1))
