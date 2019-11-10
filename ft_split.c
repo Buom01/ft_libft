@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:36:27 by badam             #+#    #+#             */
-/*   Updated: 2019/11/10 22:07:49 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/10 22:19:34 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char			**ft_split(char const *s, char c)
 	size_t	frgmtlen;
 	size_t	itemtofreeup;
 
-	if (s)
+	if (!s)
 		return (NULL);
 	itemtofreeup = 0;
 	strcpy = ft_split_stripchar((char*)s, c);
