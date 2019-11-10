@@ -6,14 +6,14 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 23:04:05 by badam             #+#    #+#             */
-/*   Updated: 2019/11/10 23:41:11 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/10 23:43:13 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "ft_lstclear_bonus.h"
 
-static int	ft_lstmap_free(t_list **nl, void *content, void (*del)(void *))
+t_list		*ft_lstmap_free(t_list **nl, void *content, void (*del)(void *))
 {
 	if (content)
 		del(content);
@@ -34,11 +34,12 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		if(!(nlcpycontent = f(lstcpy->content)))
 			return (ft_lstmap_free(&newlst, (void *)0, del));
-		if (!(nlcpy = ft_lstnew(nlcpycontent))
+		if (!(nlcpy = ft_lstnew(nlcpycontent)))
 			return (ft_lstmap_free(&newlst, nlcpycontent, del));
 		if (!newlst)
-			newlist = nlcpy;
+			newlst = nlcpy;
 		lstcpy = lstcpy->next;
 		nlcpy = nlcpy->next;
 	}
+	return (newlst);
 }
