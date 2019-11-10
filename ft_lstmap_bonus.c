@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 23:04:05 by badam             #+#    #+#             */
-/*   Updated: 2019/11/10 23:43:13 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/10 23:44:18 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	nlcpy = 0;
 	while (lstcpy)
 	{
-		if(!(nlcpycontent = f(lstcpy->content)))
+		if (!(nlcpycontent = f(lstcpy->content)))
 			return (ft_lstmap_free(&newlst, (void *)0, del));
 		if (!(nlcpy = ft_lstnew(nlcpycontent)))
 			return (ft_lstmap_free(&newlst, nlcpycontent, del));
