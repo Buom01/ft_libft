@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 16:10:41 by badam             #+#    #+#             */
-/*   Updated: 2019/11/04 17:11:38 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/10 22:43:36 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst->next)
-		lst = lst->next;
+	if (lst)
+		while (lst->next)
+			lst = lst->next;
 	return (lst);
 }
