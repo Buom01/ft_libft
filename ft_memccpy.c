@@ -6,19 +6,22 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 15:44:54 by badam             #+#    #+#             */
-/*   Updated: 2019/11/10 19:58:18 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/10 20:17:39 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdlib.h"
 #include "ft_strlen.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memccpy(char *dst, const char *src, int c, size_t n)
 {
-	unsigned char	*srccpy;
+	size_t	i;
 
-	srccpy = (unsigned char*)src;
-	while (n-- && *(srccpy - 1) != (unsigned char)c)
-		*((unsigned char*)(dst++)) = *(srccpy++);
-	return (*(srccpy - 1) == (unsigned char)c ? (void*)(dst) : NULL);
+	i = 0;
+	while (n-- && src[i - 1] != c)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	return (src[i - 1] == c ? (void*)(dst) : NULL);
 }
