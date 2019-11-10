@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 20:22:07 by badam             #+#    #+#             */
-/*   Updated: 2019/11/03 20:48:00 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/10 22:11:20 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*fstr;
 	char	*fstrcpy;
 
+	if (!s || !f)
+		return (NULL);
 	strlen = ft_strlen(s);
 	fstr = ft_substr(s, 0, strlen + 1);
 	if (!fstr)
