@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 17:03:49 by badam             #+#    #+#             */
-/*   Updated: 2019/11/10 23:38:46 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/11 20:01:01 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*next;
 	t_list	*current;
 
-	if (!lst || !*lst || !del)
+	if (!lst || !*lst)
 		return ;
 	current = *lst;
 	while (current)

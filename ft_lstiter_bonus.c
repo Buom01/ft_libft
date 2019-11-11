@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 22:57:56 by badam             #+#    #+#             */
-/*   Updated: 2019/11/10 23:02:36 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/11 20:03:43 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst)
 	{
-		f(lst);
+		f(lst->content);
 		lst = lst->next;
 	}
 }
