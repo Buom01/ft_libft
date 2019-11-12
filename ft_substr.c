@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 17:46:03 by badam             #+#    #+#             */
-/*   Updated: 2019/11/10 22:04:17 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/12 19:35:00 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	strcpy = (char*)s + start;
+	strcpy = (char*)s;
+	while (start-- && *strcpy)
+		strcpy++;
 	newlen = ft_strlen(strcpy);
 	if (newlen > len)
 		newlen = len;
