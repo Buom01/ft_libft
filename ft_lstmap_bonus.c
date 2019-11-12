@@ -6,12 +6,13 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 23:04:05 by badam             #+#    #+#             */
-/*   Updated: 2019/11/11 20:57:29 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/12 20:42:17 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "ft_lstclear_bonus.h"
+#include "ft_lstnew_bonus.h"
 
 t_list		*ft_lstmap_free(t_list **nl, void *content, void (*del)(void *))
 {
@@ -24,23 +25,22 @@ t_list		*ft_lstmap_free(t_list **nl, void *content, void (*del)(void *))
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*lstcpy;
+	void	*newcnt;
 	t_list	*newlst;
-	t_list	*nlcpy;
-	void	*nlcpycontent;
+	t_list	*newlstcpy;
 
-	lstcpy = lst;
-	nlcpy = 0;
 	newlst = 0;
+	lstcpy = lst;
 	while (lstcpy)
 	{
-		if (!(nlcpycontent = f(lstcpy->content)))
-			return (ft_lstmap_free(&newlst, (void *)0, del));
-		if (!(nlcpy = ft_lstnew(nlcpycontent)))
-			return (ft_lstmap_free(&newlst, nlcpycontent, del));
+		if (!(newcnt = f(lstcpy->content)))
+			return (ft_lstmap_free(&newlst, newcnt, del));
+		if (!(newlstcpy = ft_lstnew(newcnt)))
+			return (ft_lstmap_free(&newlst, newcnt, del));
 		if (!newlst)
-			newlst = nlcpy;
+			newlst = newlstcpy;
+		newlstcpy = newlstcpy->next;
 		lstcpy = lstcpy->next;
-		nlcpy = nlcpy->next;
 	}
 	return (newlst);
 }
