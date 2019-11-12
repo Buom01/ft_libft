@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 16:37:41 by badam             #+#    #+#             */
-/*   Updated: 2019/11/12 20:11:44 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/12 20:17:18 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(const char *str)
 {
-	unsigned long long	nb;
+	long	nb;
 	char	sign;
 	char	*c;
 
