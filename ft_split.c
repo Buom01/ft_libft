@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:36:27 by badam             #+#    #+#             */
-/*   Updated: 2019/11/10 22:19:34 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/12 18:53:44 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,6 @@ char			**ft_split(char const *s, char c)
 		strcpy += frgmtlen + 1;
 		strcpy = ft_split_stripchar(strcpy, c);
 	}
-	*tabcpy = (NULL);
+	tabcpy = (NULL);
 	return (tab);
 }
