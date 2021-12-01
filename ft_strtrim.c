@@ -6,7 +6,7 @@
 /*   By: badam <badam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 13:17:15 by badam             #+#    #+#             */
-/*   Updated: 2020/04/09 03:22:22 by badam            ###   ########.fr       */
+/*   Updated: 2021/12/01 23:08:59 by bastien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
-	scpy = (char*)s1;
+	scpy = (char *)s1;
 	trimdlen = 0;
 	while (*scpy && ft_strchr(set, (int)(*scpy)))
 		scpy++;
-	trimbgn = scpy - (char*)s1;
+	trimbgn = scpy - (char *)s1;
 	while (*(scpy + 1))
 		scpy++;
 	while (ft_strrchr(set, (int)(*scpy)))
 		scpy--;
-	trimdlen = scpy - (char*)s1 - trimbgn + 1;
+	trimdlen = scpy - (char *)s1 - trimbgn + 1;
 	return (ft_substr(s1, trimbgn, trimdlen));
 }

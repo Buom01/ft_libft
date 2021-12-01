@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 16:11:28 by badam             #+#    #+#             */
-/*   Updated: 2020/04/09 03:21:27 by badam            ###   ########.fr       */
+/*   Updated: 2021/12/01 22:47:08 by bastien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	char	*srccpy;
 
 	dstcpy = dst;
-	srccpy = (char*)src;
+	srccpy = (char *)src;
 	if (!dst || !src)
 		return (0);
 	if (dstsize)

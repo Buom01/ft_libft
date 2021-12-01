@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 17:17:02 by badam             #+#    #+#             */
-/*   Updated: 2020/04/09 03:20:27 by badam            ###   ########.fr       */
+/*   Updated: 2021/12/01 23:17:30 by bastien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char	*ft_strdup(const char *s1)
 	size_t	strdupcur;
 
 	strlen = ft_strlen(s1) + 1;
-	if (!(strdup = malloc(strlen * sizeof(char))))
+	strdup = malloc(strlen * sizeof(char));
+	if (!strdup)
 		return (NULL);
 	strdupcur = 0;
 	while (strdupcur < strlen)

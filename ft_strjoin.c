@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 18:05:48 by badam             #+#    #+#             */
-/*   Updated: 2020/04/09 03:20:44 by badam            ###   ########.fr       */
+/*   Updated: 2021/12/01 23:09:59 by bastien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	strdst = malloc((len + 1) * sizeof(char));
 	if (!strdst)
 		return (NULL);
-	strdstcpy = (char*)strdst;
-	strsrccpy = (char*)s1;
+	strdstcpy = (char *)strdst;
+	strsrccpy = (char *)s1;
 	while (*strsrccpy)
 		*(strdstcpy++) = *(strsrccpy++);
-	strsrccpy = (char*)s2;
+	strsrccpy = (char *)s2;
 	while (*strsrccpy)
 		*(strdstcpy++) = *(strsrccpy++);
 	*strdstcpy = '\0';

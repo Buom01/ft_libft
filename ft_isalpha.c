@@ -6,11 +6,12 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:01:56 by badam             #+#    #+#             */
-/*   Updated: 2019/10/07 11:14:33 by badam            ###   ########.fr       */
+/*   Updated: 2021/12/01 23:39:00 by bastien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int letter)
 {
-	return (letter >= 'a' && letter <= 'z') || (letter >= 'A' && letter <= 'Z');
+	return ((letter >= 'a' && letter <= 'z')
+		|| (letter >= 'A' && letter <= 'Z'));
 }

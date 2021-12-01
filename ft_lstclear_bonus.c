@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 17:03:49 by badam             #+#    #+#             */
-/*   Updated: 2020/04/09 03:14:07 by badam            ###   ########.fr       */
+/*   Updated: 2021/12/01 23:15:20 by bastien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		ft_lstdelone(current, del);
 		current = next;
 	}
-	*lst = (t_list*)0;
+	*lst = (t_list *)0;
 }
