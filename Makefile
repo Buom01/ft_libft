@@ -6,13 +6,14 @@
 #    By: bastien <badam@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/01 22:00:07 by bastien           #+#    #+#              #
-#    Updated: 2021/12/01 22:05:50 by bastien          ###   ########.fr        #
+#    Updated: 2021/12/01 22:23:00 by bastien          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME        = libft.a
 CC          = clang
 CFLAGS      = -Wall -Wextra -Werror
+
 SRC         = \
     ft_atoi.c \
     ft_isalpha.c \
@@ -49,25 +50,31 @@ SRC         = \
     ft_strncmp.c \
     ft_substr.c
 OBJS        = $(SRC:.c=.o)
+
 SRC_BONUS   = \
-    ft_lstnew.c \
-    ft_lstadd_front.c \
-    ft_lstsize.c \
-    ft_lstlast.c \
-    ft_lstadd_back.c \
-    ft_lstdelone.c \
-    ft_lstclear.c \
-    ft_lstiter.c \
-    ft_lstmap.c
+    ft_lstnew_bonus.c \
+    ft_lstadd_front_bonus.c \
+    ft_lstsize_bonus.c \
+    ft_lstlast_bonus.c \
+    ft_lstadd_back_bonus.c \
+    ft_lstdelone_bonus.c \
+    ft_lstclear_bonus.c \
+    ft_lstiter_bonus.c \
+    ft_lstmap_bonus.c
 OBJS_BONUS  = $(SRC_BONUS:.c=.o)
+
 all         : $(NAME)
+
 $(NAME)     : $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
+
+bonus       : $(OBJS_BONUS) $(OBJS)
+	ar -rcs $(NAME) $(OBJS) $(OBJS_BONUS)
+
 clean       :
 	rm -Rf $(OBJS) $(OBJS_BONUS)
+
 fclean      : clean
 	rm -Rf $(NAME)
+
 re          : fclean all
-bonus       : $(OBJS_BONUS) $(OBJS)
-	$(CC) $(FLAGS) $(SRC)
-	ar -rcs $(NAME) $(OBJS) $(OBJS_BONUS)
