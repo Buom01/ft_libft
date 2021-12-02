@@ -6,7 +6,7 @@
 /*   By: badam <badam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/10 22:55:29 by badam             #+#    #+#             */
-/*   Updated: 2021/12/01 23:06:11 by bastien          ###   ########.fr       */
+/*   Updated: 2021/12/02 16:57:12 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	*ft_realloc(void *ptr, size_t dstsize, size_t srcsize)
 {
 	void	*ptr2;
 
+	ptr2 = NULL;
 	if (dstsize)
 	{
 		ptr2 = malloc(dstsize);

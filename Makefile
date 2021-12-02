@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bastien <badam@student.42.fr>              +#+  +:+       +#+         #
+#    By: badam <badam@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/01 22:00:07 by bastien           #+#    #+#              #
-#    Updated: 2021/12/01 22:23:00 by bastien          ###   ########.fr        #
+#    Updated: 2021/12/02 16:56:24 by badam            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,11 @@ SRC_BONUS   = \
     ft_lstdelone_bonus.c \
     ft_lstclear_bonus.c \
     ft_lstiter_bonus.c \
-    ft_lstmap_bonus.c
+    ft_lstmap_bonus.c \
+    ft_ctoa_bonus.c \
+    ft_isspace_bonus.c \
+    ft_realloc_bonus.c \
+    ft_strcmp_bonus.c
 OBJS_BONUS  = $(SRC_BONUS:.c=.o)
 
 all         : $(NAME)
